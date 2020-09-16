@@ -3,7 +3,7 @@
 
 ## 客户端
 
-![客户端架构](/assets/P4D_client_structure.001.jpeg)
+![客户端架构](/assets/p4d_client_structure.001.jpeg)
 客户端侧包括`P4D-Core`, 以及 `P4D-Mini-Program`
 
 ### `P4D-Core` 
@@ -44,7 +44,7 @@
 5. `P4D-Mini-Program` 与其他的`小程序`工作方式类似，因此它可以轻易的转化成适应`Vue`或者`React`的系统中，开发者可选择自己熟悉的工具来开发`P4D-Mini-Program`
 
 ## 工具侧
-![工具侧](/assets/P4D_tooling.001.jpeg)
+![工具侧](/assets/p4d_tooling.001.jpeg)
 工具侧主要包含3个方面：
 1. P4D Cli，它以一个编译器和模版提供方的方式进行工作，用以编译小程序的源文件为指定的文件格式
 2. P4D IDE Plugin，就像VSCode一样工作，提供lint和面向开发者的编码支持
@@ -54,7 +54,7 @@
 
 ### 分布式网络
 
-![分布式网络](/assets/P4D_general_design.001.jpeg)
+![分布式网络](/assets/p4d_general_design.001.jpeg)
 我们看一下客户端在分布式网络的运行方式
 
 
