@@ -1,72 +1,58 @@
 # Pocket4D
-It's an open-source embbed App/Dapp container, which runs `mini-program` inside existing iOS/Android/Desktop app.
+It's an embedded open-source App/Dapp container, which runs `Mini-Program` inside existing iOS/Android/Desktop applications.
 
 1. [Pocket4D](#pocket4d)
    1. [Background](#background)
       1. [Mini-Programs](#mini-programs)
-      2. [Pain-points of current Web2.0 systems](#pain-points-of-current-web20-systems)
-      3. [Pain-points of current Web3.0 ecosystem](#pain-points-of-current-web30-ecosystem)
-   2. [The general solutions](#the-general-solutions)
+      2. [Pain points of current Web2.0 systems](#pain-points-of-current-web20-systems)
+      3. [Pain points of current Web3.0 system](#pain-points-of-current-web30-ecosystem)
+   2. [The General Solutions](#the-general-solutions)
    3. [The Technical Design](#the-technical-design)
    4. [Roadmaps](#roadmaps)
 
 ## Background
 ### Mini-Programs
-In late 2016, Allen Zhang, who is the one of the creator of Wechat starts the idea of `Mini-Program`. The `Mini-program` runs inside Wechat, which has over 1 billion users around the world. He thought the `Mini-Program` should be `Get when wanted, Leave when finished`("唾手可得，用完即走"). When the idea is shipped into wechat, and the growth is almost unstoppable. Very soon, Baidu, ByteDance, and Alibaba followed Wechat's step, developed their own `Mini-Program` stacks. By the end of June of 2020, the total users of `Mini-Program` has grown to 400 millions user, and over 600,000 `Mini-Program`s are running online.
+In late 2016, Allen Zhang, one of the founders of Wechat, initiated the idea of `Mini-Program`. At that time, WeChat already had more than 1 billion users around the world, and the `Mini-Program` were only allowed to run in WeChat. He believed that the `Mini-Program` should be `Get when wanted, Leave when finished`("唾手可得，用完即走"). When the idea landed in WeChat, its development was unstoppable. Very soon, Baidu, ByteDance, and Alibaba followed Wechat's lead and developed their own `Mini-Program` system. As of June 2020, the total number of users of `Mini-Program` has exceeded 400 million, while more than 600,000 `Mini-program` have been running online.
 
-The `Mini-Program` combines the native apps and javascript apps together. The javascript side can be very easy for most front-end coders to develope, and the native side provide rendering engine and powerful api that web browsers cannot provide. In the meantime, smart-phone users today are more rely on their phone and apps to interact with the internet service those companies provides, so the `Mini-Program` is light enough for companies are willing to extend their service rather than upgrading their existing Native Apps, and submit to AppStore of Apple and Google Play of Google.
+The `Mini-Program` combines Javascript, which is very close to what front-end developers are used to, and native apps, which provide a high-performance rendering engine and a powerful API that web browsers don't. Smartphone users, meanwhile, rely more on the convenience of mobile phones and app-based internet services. App developers prefer to be able to enhance their native apps independently, rather than having to upgrade their app versions and be censored by the App Store or Google Play every time. Thus, the `Mini-Program` becomes the lightweight optimal solution for these companies.
 
-However, these giants who made the `Mini-Program` are not intended to open-source their software, because it's hard to separate their bussiness from the service. But they did actually attract many companies and individuals to join their eco-systems.
+However, these giant companies that develop `Mini-Program` are reluctant to open source their software, as it is difficult to completely separate it from the services they offer in actual business. But the strategies of these companies have indeed attracted many other companies and individual developers to join their ecosystem.
 
-### Pain-points of current Web2.0 systems
-The web2.0 systems are full of pain-points. 
-1. One of them is the Big Brothers. As commonly knowns to developers, AppStore of App and GooglePlay of google rejects many apps due to many reasons, some are content-based, some are bussiness based. Developers have not much choise because mobile os are controlled by these giant companies. Recently, a famous mobile gaming app is rejected by AppStore and GooglePlay because the company wanted to use their payment method of their own. Apps and services are watched and regulated by these big brothers, when they think that you are violating their policies, you are rejected without talking about fair.
-2. Making a website or a native app is not easy. Developers have to buy a domain, rent an AWS server and provides https certificate and running cloud functions, and promote their apps to market. One have to spend more money before they can benifit little revenue from advertising system. 
+### Pain points of current Web2.0 system
+There are a series of pain points in Web 2.0.
+
+1. One is "Big Brothers". As developers are well-known, the App Store and Google Play will remove or reject many apps. Some are due to content violations, and some are for commercial reasons. Since the mobile operating system is under the control of these giant companies, developers have no choice. Recently, a well-known mobile game was removed from the App Store and Google Play simply because its developer wanted to use their own payment method. The "Big Brothers" have been rigorously censoring and supervising the content and services of the applications, so when they believe that the content or the service violates the their policy and regulations, the App will be rejected and there is no room for bargaining.
+2. Making a website or a native app is not easy. Developers need to buy domain names, rent servers, provide Https authentication, run cloud programs, and finally spend money to promote apps in the market. Development costs are high, and they may only make a small profit in the advertising business.
 
 
-### Pain-points of current Web3.0 ecosystem
-We hope Web3.0 ecosystem to be strong and everyone can be benefit from it. However, there are serveral pain-points for now.
+### Pain points of current Web3.0 system
+We hope that the Web 3.0 ecosystem becomes strong and everyone can benefit from it. However, there are still many pain points.
 
-1. Most Web3.0 project are `backend` projects, they need `client` side to connect to them. However, most `client` side apps are rejected by AppStore or GooglePlay, or they are really hard to use. So there are mobile wallet apps exist.
-2. Most Web3.0 `frontend` projects are browser-based. Users have to use their desktop PC or mobile web browser to use these apps. However these apps are mostly rely on browser extensions to interact with, so they are hard to get to mobile users.
-3. So there are mobile wallet apps providing the webview and `web3` interface to them. Sadly, the webpages are not very good at rendering and the compatibilities are bad, and when the mobile wallet is rejected by AppStore of Apple or Google Play, the users will have to find other solutions.
-4. The web is domain-based, it's hard to be decentralized. Aside from `backend` part, the `client` needs a http/https domain to resolve their frontend assets, even it uses aws or google cloud storage. So there is a level of risk when the domain and the assets are lost, they may become unreachable. 
+1. The vast majority of Web 3.0 projects are `back-end` projects that need to redevelop the `client-side` to interface with them. However, many `client-side` apps are rejected by the App Store and Google Play, or the experience of the `client-side` projects is so poor that they have to rely on wallet apps to be of value.
+2. The vast majority of Web 3.0 `front-end` projects are browser-based. Therefore, users have to open a desktop or mobile browser to run these web applications. However, these web applications rely to some extent on browser extensions, which makes them very difficult to reach mobile users.
+3. Current wallet apps provide interfaces for web applications through Webview and `Web3`. However, the qualities of web applications is uneven, which is prone to slow loading and compatibility issues, resulting in poor user experience. Once the Wallet App is rejected by the App Store and Google Play, users can only look for other alternatives.
+4. The web today is domain-based and it's hard to completely decentralize it. Apart from the back-end part, even if AWS cloud storage or Google cloud is used, the client still needs an http/https domain name to resolve the front-end resources. So this creates some operational risk that the app service may be inaccessible due to server-side issues.
    
 ## The general solutions
-Here we come to a solution to these pain-points, we think about the possibilities to bring the `mini-program` idea to `decentrailized` system. It may become the last piece of current stage of Web3.0 progress to expand the user scale.
+Here, we propose a solution to the above pain point: in considering the application of the `Mini-Program` to a decentralized system, we found that it has the potential to become an important piece of the puzzle in scaling users in the current Web 3.0 phase.
 
 1. Be a container.
-   The Pocket4D is tend to be a container, not app itself. This container works like what Wechat did for its `Mini-program` ecosystems. It should provide standard rendering protocols like `xml`, and provide most commonly used api for javascript to interact with, like `navigator`,`deviceInfo`. Also, it should provide most commonly used `Web3` interface for end-users.
+   Pocket4D will act as a container, not just an app. this container, like WeChat hosting the `Mini-program` ecosystem, will provide the Javascript side with standard rendering protocols (e.g. `xml`), and common APIs (e.g. `navigation`, `deviceInfo`, etc.). It should also provide interfaces such as `Web3` objects to end users. Pocket4D will have a standard rendering engine to provide quality-assured service capabilities, and can be easily integrated into the host app.
 
-   It should be using standard rendering methods to ensure the quality of the service, and should be easy to integrate to the host apps.
-
-2. Be public, be decentralized, be reachable, be privacy protected
-   It's important that the Pocket4D is publicly decentralized, that the protocols is opened to Web3.0 eco-systems.
-   1. Not using domain system to host the `client` assests. Use IPFS or decentralized storage instead.
-   2. Be embedded by apps, not one app. Easily to integrate, just like webview does.
-   3. Be searchable, the meta data of `Mini-Apps` can be searched by search engine. 
-   4. Privacy is important, that the Pocket4D should be using `privacy-protected` that Web3.0 eco-system provides.
+2. Open, decentralized, accessible, privacy protected
+   An important aspect of Pocket4D is that it is openly decentralized and its protocols will be open to the Web 3.0 ecosystem.
+   1. Instead of using the Domain Name System to store or preserve client resources, use IPFS or other decentralized storage solutions instead.
+   2. Can be integrated and embedded in most host apps, not just for one app. Low barrier to entry, just like embedding a webview.
+   3. Meta information of the `Mini-program` can be crawled by search engines.
+   4. Privacy is extremely important, so Pocket4D will use the privacy protection scheme provided in the Web 3.0 ecosystem by default.
    
-3. Bussiness and public potentials
-   1. The potential of `mini-program` is the bussiness, especially to the host and the `mini-program` itself. The host can extend their service by integrating the `mini-program` provides, the settlement between them can be done through FIAT system or Crypto system (like Smart-contract).
-   2. And the public service can be a `mini-program`, like `COVID-19` information or public voting systems.
-   3. Maybe there are many companies and apps are rejected by Apple or Google Play, they might try developing a `mini-apps` to reform their service online to mobile app users.
+3. Bussiness and public service potentials
+   1. For both the host and the `Mini-program` itself, the `Mini-program` has commercial potential. Hosts can extend their service capabilities by integrating `Mini-program`, and settlements with `Mini-program` service providers can be done in fiat currency or Cryto (such as smart contracts).
+   2. Public services can be turned into `Mini-program`, such as information about `COVID-19`, or a voting system for the public.
+   3. There are a large number of companies and apps that will be rejected by the App Store or Google Play, so they can try to develop `Mini-program` to get the opportunity to re-target mobile users.
 
 ## The Technical Design
-The Technical Design is unique to Pocket4D, please refer to [Technical Design](technical-design.md) 
+The technical design of Pocket4D is unique, please check out [Technical Design](technical-design.md) .
 
 ## Roadmaps
-The Pocket4D is a very long-term project, please refer to [Road maps](roadmaps.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
+The Pocket4D is a very long-term project, please check out [Roadmaps](roadmaps.md).
