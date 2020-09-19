@@ -1,5 +1,5 @@
 # Pocket4D
-一个嵌入式开源的App/Dapp容器，容器运行在现有的iOS/Android/桌面应用中，同时，容器内部加载和运行`小程序`
+一个嵌入式开源的App/Dapp容器，容器运行在现有的iOS/Android/桌面应用中，同时，容器内部加载和运行`小程序`。
 
 1. [Pocket4D](#pocket4d)
    1. [背景](#背景)
@@ -54,10 +54,10 @@ Web 2.0当中有一系列的痛点
    3. 有为数众多的企业和App会被苹果商店或Google Play拒绝入驻或上架，因此他们可以尝试通过开发`小程序`以获得重新面向移动用户的机会。
 
 ## 技术层面的设计
-Pocket4D的技术层面设计比较独特，请查看[技术层面设计](technical-design.md)
+Pocket4D的技术层面设计比较独特，请查看[技术层面设计](technical-design_cn.md)
 
 ## 路线规划图
-Pocket4D是一个非常长期的项目，请查看[路线规划图](roadmaps.md)
+Pocket4D是一个非常长期的项目，请查看[路线规划图](roadmaps_cn.md)
 
 
 
