@@ -1,19 +1,17 @@
 # Roadmaps
-The Pocket4D is a very long-term project, and heavily developing. We consider it to be months or years to become a mature project.
-
-Here's our roadmaps.
+Pocket4D is a very long-term project that is very technically demanding. We believe it will take months or years to mature. Our roadmap reflects this belief.
 
 ## Year 2020
 ### Proof of concept #0, end of Sep.2020
-1. With js/html/css bundled to a local server.
-2. A runnable android app with an entrance to display apps on the server.
-3. One single tap to download and display the `mini-program` to the android host, using native-rendering method.
+1. Serve the bundled JS/HTML/CSS from a local server.
+2. A runnable android app that can call and interact with a remote API.
+3. One-tap to download and run P4D mini apps on the Android host device natively via Flutter.
 
 ### Proof of concept #1, end of Oct.2020
-1. Deploy the bundled file to a decentralized storage, IPFS for example.
+1. Deploy the bundled file to decentralized storage, e.g., IPFS.
 2. Provides standard `mini-program` defined `xml` and `API` to javascript frontend.
 3. Integrate `Web3` and provide to frontend.
-4. Use smart contracts to deploy an Dapp ,such as Faucet, and use `mini-app` to interact with it.
+4. Use smart contracts to deploy an Dapp, such as Faucet, and use `mini-app` to interact with it.
 
 ### Proof of concept #2, end of Nov.2020
 1. Integrate with `WalletConnect` and provides to Javascript.
