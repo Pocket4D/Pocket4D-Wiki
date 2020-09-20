@@ -19,7 +19,7 @@
 2. 我们使用QuickJS和JavaScriptCore作为JS引擎，原因如下:
    * `QuickJS`是一个轻量级高性能的JavaScript引擎，由Fabrice Bellard和Charlie Gordon所研发，引擎使用C语言进行开发，很容易嵌入到设备中，尤其是IoT设备中。
    * `JavaScriptCore`是一个iOS/MacOS提供的嵌入式框架，在苹果开发者群体中大量使用。我们原本打算在iOS上使用`QuickJS`，可是我们并不清楚苹果是否会拒绝非`JavaScriptCore`的框架，因此保险起见，我们将在iOS上使用`JavaScriptCore`嵌入。
-   * 我们不会采用google的v8引擎，因为它的包体积太大，而且维护困难。
+   * 我们不会采用Google的v8引擎，因为它的包体积太大，而且维护困难。
   
 3. MethodChannel/PlatformChannel用于与现有的Android/iOS系统进行通信
    * 在现有Android/iOS系统中，有很多优秀的工具包，我们并不打算重新造轮子，因此我们使用Flutter插件体系以及MethodChannel/PlatformChannel与之通信，使得核心代码能很好地兼容他们。
@@ -39,8 +39,8 @@
 ### `P4D-Mini-Program` 
 
 1. P4D JavaScript：标准的JavaScript虚拟机，但可能不提供node或浏览器API。
-2. P4D html：通过简单而直接的xml/html标准页面来展示组件结构。如果你对vue.js熟悉，你会发现有不少相似之处。
-3. P4D styles：标准的css样式，同时进行了扩展。
+2. P4D Html：通过简单而直接的xml/html标准页面来展示组件结构。如果你对vue.js熟悉，你会发现有不少相似之处。
+3. P4D Styles：标准的css样式，同时进行了扩展。
 4. 所有的这些文件都将通过`P4D-Cli`进行编译，然后可由开发者自行决定上传到服务器或去中心化存储中。
 5. `P4D-Mini-Program`的运行方式与其他的`小程序`类似，因此它可以轻易的转化成适配`Vue`或者`React`的系统中，开发者可选择自己熟悉的工具来开发`P4D-Mini-Program`。
 
