@@ -2,7 +2,7 @@
 Pocket4D is a very long-term project that is very technically demanding. We believe it will take months or years to mature. Our roadmap reflects this belief.
 
 ## Year 2020
-### Proof of concept #0, end of Sep.2020
+### Proof of concept #0, end of Sep.2020 (Finished, in grayscale test)
 1. Serve the bundled JS/HTML/CSS from a local server.
 2. A runnable android app that can call and interact with a remote API.
 3. One-tap to download and run P4D mini apps on the Android host device natively via Flutter.
