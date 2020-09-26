@@ -22,7 +22,7 @@
 | # 技术              | --              | --              | --              | --             | --                      | --                |
 | 内核引擎            | V8/Jscore       | V8/Jscore       | V8/Jscore       | V8/Jscore      | V8/Jscore               | QuickJS/Jscore    |
 | 渲染引擎            | WebView/Flutter | WebView/Flutter | WebView/Flutter | WebView        | Webview                 | Flutter           |
-| 与Flutter的互操作性 | DartNative      | 有待公开        | 有待公开        | --             | --                      | 有待公开          |
+| 与Flutter的互操作性 | DartNative      | FFI        | FFI        | --             | --                      | FFI          |
 | 核心代码开源        | No              | 否              | 否              | 否             | 否                      | 是                |
 | 前端样式            | Vue/React       | Vue/React       | Vue/React       | Vue/React      | Vue/React               | Vue/React         |
 | 前端开源            | 是              | 是              | 是              | 是             | 是                      | 是                |
