@@ -1,4 +1,4 @@
-# Comparison of different solutions
+# Comparison of Different Solutions
 
 
 ## Hybrid solutions among Native+HTML/React-Native/Vue-Native/Flutter
