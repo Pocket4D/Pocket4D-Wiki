@@ -1,4 +1,4 @@
-# Comparison of different solutions
+# Comparison of Different Solutions
 
 
 ## Hybrid solutions among Native+HTML/React-Native/Vue-Native/Flutter
@@ -28,11 +28,11 @@
 | FrontEnd Open Source   | Yes             | Yes             | Yes             | Yes             | Yes            | Yes                |
 | FrontEnd Storage       | Tencent Cloud   | Alibaba Cloud   | Meituan Cloud   | ByteDance Cloud | DCloud         | Private/Blockchain |
 | Backend Provider       | Tencent Cloud   | Alibaba Cloud   | Meituan Cloud   | ByteDance Cloud | Private/DCloud | Private/Blockchain |
-| Support of Cryptos          | No              | No              | No              | No              | No             | Yes                |
 | # Eco-system && Market | --              | --              | --              | --              | --             | --                 |
 | Dev Friendliness           | Good            | Good            | Unknown         | Good            | Good           | Unknown            |
 | Number of Programs            | 200k            | 100k            | Small           | 100k            | Small          | Unknown            |
 | Payment Methods        | WechatPay       | AliPay          | Multi           | Multi           | Multi          | Multi              |
+| Support of Cryptos          | No              | No              | No              | No              | No             | Yes                |
 | Market Area          | China           | China           | China           | Global          | China          | Global             |
 | Industry       | All kinds       | All kinds       | E-Commerce      | Entertainment   | All kinds      | All kinds          |
 | # Authorities          | --              | --              | --              | --              | --             | --                 |
