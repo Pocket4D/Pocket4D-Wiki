@@ -15,30 +15,12 @@ Pocket4D支持私有化部署，支持IPFS协议。因此我们不仅可提供�
 * [Road Maps](roadmaps.md), roadmap of our plan and goal.[中文版:路线图](roadmaps_cn.md)
 
 # Demo
+
 ## 扫码体验
-TBD
 
 ## 快速开始
-### 开发基础
-开发环境：
-开发语言：
-
-### Flutter 的安装
-Flutter 的安装可参考https://flutterchina.club/get-started/install/具体上主要执行以下三步即可。本文将使用 Flutter1.12.hotfix8 稳定版作为开发环境。
-
-下载 FlutterSDK
-配置 PATH 环境路径
-flutter doctor 检查环境
-
-### 新建 Flutter 工程
-TBD
-
-### 集成小程序
-TBD
 
 ## 体系迁移
-TBD
 
 # 常见问题
-TBD
 
