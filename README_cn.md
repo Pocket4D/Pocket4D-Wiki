@@ -10,9 +10,10 @@ Pocket4D支持私有化部署，支持IPFS协议。因此我们不仅可提供�
 - 支持多链、跨生态跨平台
 
 以下资料可帮助您更好地了解Pocket4D项目：
-* [Introduction](introduction.md), an introduction of Pocket4D. [中文版:介绍](introduction_cn.md)
-* [Technical Design](technical-design.md), technical design of Pocket4D system.[中文版:技术层面设计](technical-design_cn.md)
-* [Road Maps](roadmaps.md), roadmap of our plan and goal.[中文版:路线图](roadmaps_cn.md)
+* [中文版:介绍](introduction_cn.md)
+* [中文版：解决方案对比](Comparison_cn.md)
+* [中文版:技术层面设计](technical-design_cn.md)
+* [中文版:路线图](roadmaps_cn.md)
 
 # Demo
 
