@@ -4,7 +4,7 @@ Mini-Programs are very much in line with the decentralized characteristics of th
 Pocket4D, as an open platform for Mini-Programs, provides Mini-Programs service for the majority of `host` Apps. Pocket4D integrates a series of service, such as cryptocurrecies prices inquiry, wallets of cryptocurrency, COVID-19 inquiry, voting system, blockchain mobile games and other kinds of Mini-Programs, so that host apps do not need to interface with different platforms, only need to access Pocket4D once!. It is ready for one-click integration, providing a low-cost way to realize its business and enrich the application ecosystem.
 Pocket4D supports private deployment and IPFS protocol. Therefore, we can not only provide ordinary Mini-Programs open service, but also provide a blockchain-based Mini-Programs echosystem to bring the Mini-Programs into the world of blockchain, so that the user experience of the blockchain Dapps is on par with ordinary apps.
 
-By accessing the Pocket4D platform, `hosting` apps enables:
+By accessing the Pocket4D platform, `host` Apps enables:
 - Optimizing the Dapp user experience
 - Low-cost integrated services, authorized one-click access
 - Censorship Resistance, Application Ecology Decentralization

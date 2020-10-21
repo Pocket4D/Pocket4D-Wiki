@@ -13,20 +13,20 @@
    
    * Flutter的App可以运行在iOS/Android/网页/桌面客户端，它有自己的插件体系，以及与原生C/C++/Rust库及终端设备直接交互的能力。
    * Flutter有自己的渲染引擎Skia。这是一个高性能的引擎，可运行在客户端。
-   * Flutter有自己的dartVM虚拟机。dart语言是一门面向对象的开发语言，虚拟机正是基于dart语言来开发。
+   * Flutter有自己的DartVM虚拟机。Dart语言是一门面向对象的开发语言，虚拟机正是基于Dart语言来开发。
    * Flutter生态系统拥有大量的开发者。许多科技巨头都在投入大量的人力物力将Flutter应用在新项目里。Flutter的跨平台能力吸引了越来越多的开发者，他们之中大部分是Android/iOS及Web开发者。而他们非常乐于选择Flutter作为跨平台开发的首选语言。
   
 2. 我们使用QuickJS和JavaScriptCore作为JS引擎，原因如下:
    * `QuickJS`是一个轻量级高性能的JavaScript引擎，由Fabrice Bellard和Charlie Gordon所研发，引擎使用C语言进行开发，很容易嵌入到设备中，尤其是IoT设备中。
    * `JavaScriptCore`是一个iOS/MacOS提供的嵌入式框架，在苹果开发者群体中大量使用。我们原本打算在iOS上使用`QuickJS`，可是我们并不清楚苹果是否会拒绝非`JavaScriptCore`的框架，因此保险起见，我们将在iOS上使用`JavaScriptCore`嵌入。
-   * 我们不会采用Google的v8引擎，因为它的包体积太大，而且维护困难。
+   * 我们不会采用Google的V8引擎，因为它的包体积太大，而且维护困难。
   
 3. MethodChannel/PlatformChannel用于与现有的Android/iOS系统进行通信
    * 在现有Android/iOS系统中，有很多优秀的工具包，我们并不打算重新造轮子，因此我们使用Flutter插件体系以及MethodChannel/PlatformChannel与之通信，使得核心代码能很好地兼容他们。
    * 同时我们将利用Flutter的plugin体系（如`Crypto`类）对核心代码进行扩展。
 
 4. Dart:FFI用于与C/C++/Rust进行通信
-   * 与MethodChannel/PlatformChannel不同的是，我们使用Dart:FFI直接与C/C++/rust进行通信，我们的JS引擎使用的就是Dart:FFI。
+   * 与MethodChannel/PlatformChannel不同的是，我们使用Dart:FFI直接与C/C++/Rust进行通信，我们的JS引擎使用的就是Dart:FFI。
    * 如果其他的blockchain相关的SDK或者插件使用的是Rust，那么我们可以直接接入。
   
 5. 在Dart/Flutter层做实现
